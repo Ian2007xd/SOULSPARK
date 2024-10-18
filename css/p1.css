@@ -1,0 +1,144 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animación de bienvenida */
+#bienvenida {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.titulo-bienvenida {
+    font-size: 4em;
+    margin: 0;
+    opacity: 0;
+    animation: slideIn 2s ease-out forwards;
+}
+
+.subtitulo-bienvenida {
+    font-size: 1.5em;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* Animaciones clave */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ocultar el contenido mientras se muestra la bienvenida */
+#contenido {
+    opacity: 0;
+    animation: showContent 1s ease-in forwards;
+    animation-delay: 3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;  /* Asegura que ocupa toda la pantalla en dispositivos pequeños */
+    max-width: 800px; /* Añade un ancho máximo si deseas limitarlo */
+}
+
+@keyframes showContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo de las frases */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #ff6347;
+}
+
+.frase {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #20b2aa;
+    font-weight: bold;
+}
+.explicacion {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #4682b4;
+    text-align: center;
+}
