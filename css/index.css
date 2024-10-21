@@ -17,7 +17,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #282c34;
+    background-color: #212121;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@ body {
     margin: 0;
     opacity: 0;
     animation: slideIn 2s ease-out forwards;
+    color: #f44336;
 }
 
 .subtitulo-bienvenida {
@@ -98,130 +99,52 @@ body {
 
 /* Estilo de las frases */
 .container {
+    height: 400px;
+    width: 800px;
     text-align: center;
-    background-color: #303030;
+    background-color: #515151;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: relative; /* Añadido para posicionar el botón de favoritos */
 }
-.contenido .container .fa {
-    height: 100px;
-    width: 100px;
-}
+
 h1 {
     font-size: 2.5rem;
-    color: #9c27b0;
+    color: #fff;
     margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 p {
-    font-size: .8rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
 button {
-    font-size: 1rem; /* Cambiado a 1rem para hacer los botones más pequeños */
-    padding: 0.5rem 1rem; /* Reducido el padding */
-    background-color: #9c27b0;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #c62828;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0.5rem; /* Agregado margen para espaciar botones */
 }
-
 button:hover {
-    background-color: #6a1b9a;
+    background-color: #b71c1c;
 }
 
 .frase {
     margin-top: 2rem;
     font-size: 1.8rem;
-    color: #f4f4f4;
+    color: #f44336;
     font-weight: bold;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 .explicacion {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #dadada;
+    color: #eaeaea;
     text-align: center;
-}
-
-/* Estilo del modal */
-#modalFavoritos {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.modal-contenido {
-    background-color: #303030;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.modal-contenido h2 {
-    margin-bottom: 1rem;
-}
-
-.modal-contenido ul {
-    list-style: none;
-    padding: 0;
-}
-
-.modal-contenido li {
-    margin: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.eliminar {
-    font-size: 1rem; /* Botón de eliminar más pequeño */
-    padding: 0.1rem 0.1rem; /* Menor padding */
-    background-color: #303030;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.eliminar:hover {
-    background-color: #6a1b9a;
-}
-
-#cerrarModal {
-    margin-top: 1rem;
-}
-
-/* Estilo del botón de favoritos en la parte superior derecha */
-.favoritos {
-    position: absolute; /* Posición absoluta para colocarlo en la parte superior derecha */
-    top: 10px;
-    right: 10px;
-}
-
-.favoritos-btn {
-    font-size: 2rem; /* Hacer el botón de favoritos más pequeño */
-    padding: 0.2rem 0.5rem; /* Ajustar padding */
-    background-color: #303030;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.favoritos-btn:hover {
-    color: red;
-    background-color: #303030;
-    transition: all .5s ease;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0, 0.9);
 }
