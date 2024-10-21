@@ -99,8 +99,6 @@ body {
 
 /* Estilo de las frases */
 .container {
-    height: 400px;
-    width: 800px;
     text-align: center;
     background-color: #515151;
     padding: 2rem;
@@ -149,10 +147,6 @@ button:hover {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0, 0.9);
 }
 @media screen and (min-width: 768px) and (max-width: 1023){
-    .container {
-        height: 400px;
-        width: 1000px;
-    }
     h1 {
         font-size: 1rem;
         margin-bottom: .5rem;
@@ -177,10 +171,6 @@ button:hover {
     }
 }
 @media screen and (max-width: 767px){
-    .container {
-        height: 380px;
-        width: 400px;
-    }
     h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
