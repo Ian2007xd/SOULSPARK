@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoulSpark</title>
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulSPark</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- Animación de bienvenida -->
-    <div id="bienvenida">
-        <h1 class="titulo-bienvenida">SoulSpark</h1>
-        <p class="subtitulo-bienvenida">La chispa que enciende tu motivación</p>
-    </div>
+  <!-- Contenedor de la animación -->
+  <div id="intro-animation">
+    <h1>Bienvenido a SoulSpark</h1>
+  </div>
 
-    <!-- Contenido de frases -->
-    <div id="contenido" style="display: none;" class="container">
-        <h1>Bienvenido a SoulSpark</h1>
-        <p>Genera tus frases de inspiración y motivación</p>
-        <button id="generar-frase">Generar</button>
-        <div id="frase" class="frase"></div>
-        <div id="explicacion" class="explicacion"></div>
+  <!-- Contenedor del contenido principal -->
+  <div id="main-content" style="display: none;">
+    <h2>ELIGE UNA OPCION DE TU PREFERENCIA</h2>
+    <div class="card-container">
+      <div class="card" onclick="goToSection('frases.html')">
+        <img src="img/frases1.avif" alt="Sección 1">
+        <div class="card-title">FRASES</div>
+      </div>
+      <div class="card" onclick="goToSection('palabras.html')">
+        <img src="img/frases.jpg" alt="Sección 2">
+        <div class="card-title">PALABRAS</div>
+      </div>
+      <div class="card" onclick="goToSection('incognita.html')">
+        <img src="img/incognito.jpg" alt="Sección 3">
+        <div class="card-title">?</div>
+      </div>
     </div>
+  </div>
 
-    <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulSpark</title>
+  <link rel="stylesheet" href="css/palabras.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EXPLORA PALABRAS INSPIRADORAS</h1>
+    <div class="select-box">
+      <input type="text" id="search-box" placeholder="Busca una palabra..." oninput="filterWords()">
+      <select id="word-select" size="5" onchange="showMeaning(this.value)">
+        <option value="INVESTIGACION">INVESTIGACIÓN</option>
+        <option value="VOLUNTAD">VOLUNTAD</option>
+        <option value="COOPERACION">COOPERACIÓN</option>
+        <option value="CINCERIDAD">CINCERIDAD</option>
+        <option value="CONSTANCIA">CONSTANCIA</option>
+        <option value="COMPANEDISMO">COMPAÑERISMO</option>
+        <option value="AHORRO">AHORRO</option>
+        <option value="ECOFILIA">ECOFILIA</option>
+        <option value="RESPONSABILIDAD">RESPONSABILIDAD</option>
+        <option value="ESFUERZO">ESFUERZO</option>
+        <option value="RESPETO">RESPETO</option>
+        <option value="ALCANZAR UN OBJETIVO">ALCANZAR UN OBJETIVO</option>
+        <option value="TENER IDEALES">TENER IDEALES</option>
+        <option value="AMOR">AMOR</option>
+        <option value="CREATIVIDAD">CREATIVIDAD</option>
+        <option value="IGUALDAD">IGUALDAD</option>
+        <option value="CONFIANZA">CONFIANZA</option>
+        <option value="CORDIALIDAD">CORDIALIDAD</option>
+        <option value="PROTECCION Y CUIDADO">PROTECCIÓN Y CUIDADO</option>
+        <option value="AUTODISCIPLINA">AUTODISCIPLINA</option>
+        <option value="PUNTUALIDAD">PUNTUALIDAD</option>
+        <option value="AMISTAD Y ALEGRIA">AMISTAD Y ALEGRÍA</option>
+        <option value="FAMILIA">FAMILIA</option>
+        <option value="UNION">UNIÓN</option>
+        <option value="REFLEXION">REFLEXIÓN</option>
+        <option value="PERSEVERANCIA">PERSEVERANCIA</option>
+        <option value="PERDON">PERDÓN</option>
+        <option value="GENEROCIDAD">GENEROSIDAD</option>
+      </select>
+    </div>
+
+    <div id="meaning-container">
+      <h2 id="meaning-title">Significado</h2>
+      <p id="meaning-text">Selecciona una palabra para descubrir su significado filosófico y reflexionar desde una perspectiva distinta.</p>
+    </div>
+  </div>
+
+  <script src="js/palabras.js"></script>
+</body>
+</html>

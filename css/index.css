@@ -1,194 +1,99 @@
-/* Estilos generales */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #212121;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Animación de bienvenida */
-#bienvenida {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #212121;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    animation: fadeOut 1s ease-in-out forwards;
-    animation-delay: 3s;
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #212121;
 }
 
-.titulo-bienvenida {
-    font-size: 4em;
-    margin: 0;
-    opacity: 0;
-    animation: slideIn 2s ease-out forwards;
-    color: #f44336;
+/* Estilos para la animación de entrada */
+#intro-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121;
+  color: #c62828;
+  font-size: 2rem;
+  animation: fadeOut 3s forwards;
 }
 
-.subtitulo-bienvenida {
-    font-size: 1.5em;
-    margin-top: 10px;
-    opacity: 0;
-    animation: fadeIn 3s ease-out forwards;
-    animation-delay: 1.5s;
-}
-
-/* Animaciones clave */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
+/* Animación de desvanecimiento */
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-/* Ocultar el contenido mientras se muestra la bienvenida */
-#contenido {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
-    animation: showContent 1s ease-in forwards;
-    animation-delay: 3s;
-    display: flex;
+    visibility: hidden;
+  }
+}
+
+/* Estilos del contenido principal */
+#main-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+h2 {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Contenedor de las cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Estilos para las cards */
+.card {
+  flex: 1 1 300px; /* Ajuste flexible: ocupará 1 espacio, con tamaño base de 300px */
+  max-width: 300px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #c62828;
+  color: white;
+  text-align: center;
+}
+
+/* Adaptación para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card-container {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 100%;  /* Asegura que ocupa toda la pantalla en dispositivos pequeños */
-    max-width: 800px; /* Añade un ancho máximo si deseas limitarlo */
-}
+  }
 
-@keyframes showContent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Estilo de las frases */
-.container {
-    text-align: center;
-    background-color: #515151;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-button {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    background-color: #c62828;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #b71c1c;
-}
-
-.frase {
-    margin-top: 2rem;
-    font-size: 1.8rem;
-    color: #f44336;
-    font-weight: bold;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-.explicacion {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #eaeaea;
-    text-align: center;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0, 0.9);
-}
-@media screen and (min-width: 768px) and (max-width: 1023){
-    h1 {
-        font-size: 1rem;
-        margin-bottom: .5rem;
-    }
-    
-    p {
-        font-size: .8rem;
-        margin-bottom: 1rem;
-    }
-    
-    button {
-        font-size: 1rem;
-        padding: .5rem 1rem;
-    }    
-    .frase {
-        margin-top: 1rem;
-        font-size: .8rem;
-    }
-    .explicacion {
-        margin-top: .5rem;
-        font-size: .6rem;
-    }
-}
-@media screen and (max-width: 767px){
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-    p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    button {
-        font-size: 1.2rem;
-        padding: 1rem 1.5rem;
-    }    
-    .frase {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
-    .explicacion {
-        margin-top: .5rem;
-        font-size: 1rem;
-    }
+  .card {
+    width: 100%; /* Las cards ocuparán el 100% del ancho en pantallas pequeñas */
+    max-width: 100%; /* Para que no superen el ancho del contenedor */
+  }
 }
